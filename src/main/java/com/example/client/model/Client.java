@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
+@Data
 @Entity
 public class Client {
     @Id
@@ -15,6 +17,7 @@ public class Client {
     private String name;
     private  String email;
     private Long phoneNo;
+    private boolean collected = false;
 
     public Client() {}
 
@@ -26,39 +29,39 @@ public class Client {
         this.phoneNo = phoneNo;
     }
 
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Long getPhoneNo() {
-        return phoneNo;
-    }
-
-    public void setPhoneNo(Long phoneNo) {
-        this.phoneNo = phoneNo;
-    }
-
-    public String getId() {
-        return String.valueOf(id);
-    }
+//    public String getTransactionId() {
+//        return transactionId;
+//    }
+//
+//    public void setTransactionId(String transactionId) {
+//        this.transactionId = transactionId;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+//
+//    public Long getPhoneNo() {
+//        return phoneNo;
+//    }
+//
+//    public void setPhoneNo(Long phoneNo) {
+//        this.phoneNo = phoneNo;
+//    }
+//
+//    public String getId() {
+//        return String.valueOf(id);
+//    }
 }
